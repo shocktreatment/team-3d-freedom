@@ -1,0 +1,447 @@
+.order__wrap {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 149px;
+    padding-right: 149px;
+  }
+}
+
+.order__wrap-1 {
+  position: absolute;
+  content: '';
+  width: 72px;
+  height: 74px;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 72px;
+  top: -20px;
+  right: -15px;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+    width: 136px;
+    height: 144px;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 72px;
+    left: -30px;
+    top: 120px;
+  }
+}
+
+.order__wrap-2 {
+  position: absolute;
+  content: '';
+  width: 72px;
+  height: 74px;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+  top: 55px;
+  left: -15px;
+  border-radius: 25px 0px;
+
+  @include tablet {
+    left: 665px;
+    top: 0px;
+  }
+  @include desktop {
+    left: 1260px;
+    top: -120px;
+    width: 136px;
+    height: 144px;
+    border-radius: 72px 0px;
+  }
+}
+
+.order__wrap-3 {
+  position: absolute;
+  content: '';
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 25px;
+  width: 72px;
+  height: 74px;
+  top: 430px;
+  right: -20px;
+  display: block;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.order__wrap-4 {
+  position: absolute;
+  content: '';
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  background-color: transparent;
+  border-radius: 0px 0px 0px 35px;
+  width: 72px;
+  height: 74px;
+  top: 480px;
+  left: -20px;
+  z-index: -2;
+  display: block;
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.order__wrap-5 {
+  position: absolute;
+  content: '';
+  width: 72px;
+  height: 74px;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+  top: 750px;
+  right: -15px;
+  border-radius: 25px 0px;
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.order {
+  margin-bottom: 60px;
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  @include tablet {
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    align-items: start;
+  }
+}
+
+.order__title {
+  @include fonts(700, 18, 23, null, uppercase);
+  margin-bottom: 35px;
+  color: $secondaryTextColor;
+
+  @include tablet {
+    @include fonts(700, 24, 30, null, uppercase);
+    text-align: center;
+  }
+
+  @include desktop {
+    @include fonts(700, 36, 45, null, uppercase);
+    text-align: start;
+    margin-bottom: 44px;
+  }
+}
+
+.order__form {
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.order__form-name {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.order__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $secondaryTextColor;
+  padding-bottom: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  @include tablet {
+    width: 400px;
+  }
+  @include desktop {
+    width: 555px;
+  }
+}
+
+.order__input:focus + .order__label,
+.order__input:not(:placeholder-shown) + .order__label {
+  transform: translateY(-30px);
+  @include fonts(400, 14, 20);
+}
+
+.order__label-text {
+  @include fonts(400, 16, 20);
+  color: $primaryTextColor;
+  @include desktop {
+    @include fonts(400, 18, 20);
+  }
+}
+
+.order__label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  padding-bottom: 4px;
+  @include fonts(400, 16, 20);
+  color: $primaryTextColor;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fonts 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include desktop {
+    @include fonts(400, 18, 20);
+  }
+}
+
+.order__text {
+  width: 100%;
+  height: 199px;
+  margin-top: 4px;
+  border-radius: 50px 0;
+  border: 1px solid $secondaryTextColor;
+  padding: 22px 20px;
+  resize: none;
+  margin-bottom: 4px;
+  outline: none;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    border-color: $primaryTextColor;
+  }
+  &::placeholder {
+    @include fonts(400, 18, 20);
+  }
+
+  @include desktop {
+    width: 555px;
+  }
+}
+
+.order__textaria {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  & textarea::placeholder {
+    color: #cdcdcd;
+  }
+  @include desktop {
+    margin-bottom: 24px;
+  }
+}
+
+.atatch {
+  position: absolute;
+  content: '';
+  bottom: 75px;
+  left: 87%;
+
+  @include mobile {
+    bottom: 55px;
+    left: 400px;
+  }
+  @include tablet {
+    bottom: 55px;
+    left: 360px;
+  }
+  @include desktop {
+    left: 515px;
+    bottom: 35px;
+  }
+}
+
+.textaria__text {
+  @include fonts(400, 16, 20);
+  padding-right: 70px;
+  width: 100%;
+  color: #cdcdcd;
+
+  @include tablet {
+    width: 400px;
+    padding-right: 20px;
+  }
+  @include desktop {
+    @include fonts(400, 18, 20);
+    width: 555px;
+  }
+}
+
+.form__button {
+  @include fonts(700, 16, 24, 0.01, uppercase);
+  width: 280px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  background-color: $secondaryBgColor;
+  color: $secondaryTextColor;
+  border-radius: 30.5px;
+  box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px rgba(72, 121, 150, 0.1),
+    5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: white;
+  }
+  @include mobile {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  @include tablet {
+    margin-right: 0;
+    width: 175px;
+    height: 55px;
+  }
+  @include desktop {
+    @include fonts(700, 18, 24, 0.01, uppercase);
+    margin-right: 0;
+    width: 175px;
+    height: 55px;
+  }
+}
+
+.contacts-fom {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include tablet {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  @include desktop {
+    flex-direction: column;
+    gap: 68px;
+  }
+}
+
+.contacts-fom__tel {
+  margin-bottom: 24px;
+  @include desktop {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.contacts-fom__wrap {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: column;
+    gap: 68px;
+  }
+}
+
+.contacts-fom__time {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  @include desktop {
+    align-items: flex-end;
+  }
+}
+
+.contacts-fom__title {
+  display: flex;
+  @include fonts(700, 18, 23);
+  color: $secondaryTextColor;
+  margin-bottom: 8px;
+  justify-content: start;
+  text-transform: uppercase;
+  @include tablet {
+    @include fonts(700, 24, 30, null, uppercase);
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  @include desktop {
+    @include fonts(700, 36, 45, null, uppercase);
+    margin-bottom: 18px;
+  }
+}
+
+.contacts-fom__pmail {
+  cursor: pointer;
+  @include fonts(400, 16, 20);
+  color: $primaryTextColor;
+  transition: color 250px cubic-bezier(0.4, 0, 0.2, 1);
+  @include desktop {
+    @include fonts(400, 18, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &:hover,
+  &:focus {
+    color: $secondaryTextColor;
+  }
+}
+
+.contacts-fom__item {
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  @include desktop {
+    margin-right: 2px;
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.contacts-fom__phone {
+  @include fonts(400, 16, 20);
+  text-transform: capitalize;
+  cursor: pointer;
+  color: $primaryTextColor;
+  transition: color 250px cubic-bezier(0.4, 0, 0.2, 1);
+  @include desktop {
+    @include fonts(400, 18, 20);
+  }
+  &:hover,
+  &:focus {
+    color: $secondaryTextColor;
+  }
+}
+
+.contacts-fom__time > .contacts-fom__list {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  @include tablet {
+    align-items: flex-end;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.left {
+  @include desktop {
+    align-items: flex-start;
+  }
+}
